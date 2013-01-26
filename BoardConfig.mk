@@ -59,6 +59,10 @@ BOARD_KERNEL_CMDLINE := no_console_suspend=1 msmsdcc_sdioirq=1 wire.search_count
 BOARD_KERNEL_BASE := 0x20000000
 BOARD_KERNEL_NEW_PPPOX := true
 
+# Kernel Build
+TARGET_KERNEL_SOURCE := kernel/htc/msm
+TARGET_KERNEL_CONFIG := cyanogen_bravo_defconfig
+
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
@@ -95,7 +99,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x09000000
 endif
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/bravo/kernel
 
 # to enable the GPS HAL
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := bravo
